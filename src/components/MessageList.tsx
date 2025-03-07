@@ -23,42 +23,47 @@ export default function MessageList({ messages, isLoading }: MessageListProps) {
     const paragraphs = content.split('\n\n');
     
     return paragraphs.map((paragraph, pIndex) => {
-      // Process each paragraph for LaTeX content
-      const parts = paragraph.split(/(\\[\[\(].*?\\[\]\)])/gs);
+      // Process each paragraph for LaTeX content using a more compatible regex
+      const parts = paragraph.split(/(?:\\[\[\(][\s\S]*?\\[\]\)])/g);
+      const matches = paragraph.match(/(?:\\[\[\(][\s\S]*?\\[\]\)])/g) || [];
       
-      const processedParts = parts.map((part, index) => {
-        // Check if this part is a LaTeX expression
-        const isDisplayMath = part.startsWith('\\[') && part.endsWith('\\]');
-        const isInlineMath = part.startsWith('\\(') && part.endsWith('\\)');
+      // Interleave the parts with the matches
+      const processedParts = parts.reduce((acc: JSX.Element[], part, index) => {
+        acc.push(<span key={`${pIndex}-${index}-text`}>{part}</span>);
         
-        if (isDisplayMath || isInlineMath) {
-          try {
-            // Remove the delimiters
-            const latex = part.slice(2, -2);
-            const html = katex.renderToString(latex, {
-              displayMode: isDisplayMath,
-              throwOnError: false,
-              strict: false
-            });
-            
-            return (
-              <span 
-                key={`${pIndex}-${index}`}
-                className={isDisplayMath ? 'math-block' : 'katex-inline'}
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
-            );
-          } catch (error) {
-            console.error('LaTeX rendering error:', error);
-            return <span key={`${pIndex}-${index}`}>{part}</span>;
+        if (index < matches.length) {
+          const match = matches[index];
+          const isDisplayMath = match.startsWith('\\[') && match.endsWith('\\]');
+          const isInlineMath = match.startsWith('\\(') && match.endsWith('\\)');
+          
+          if (isDisplayMath || isInlineMath) {
+            try {
+              // Remove the delimiters
+              const latex = match.slice(2, -2);
+              const html = katex.renderToString(latex, {
+                displayMode: isDisplayMath,
+                throwOnError: false,
+                strict: false
+              });
+              
+              acc.push(
+                <span 
+                  key={`${pIndex}-${index}-math`}
+                  className={isDisplayMath ? 'math-block' : 'katex-inline'}
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+              );
+            } catch (error) {
+              console.error('LaTeX rendering error:', error);
+              acc.push(<span key={`${pIndex}-${index}-error`}>{match}</span>);
+            }
           }
         }
         
-        // Return regular text with line breaks preserved
-        return <span key={`${pIndex}-${index}`}>{part}</span>;
-      });
+        return acc;
+      }, []);
       
-      // Wrap each paragraph in a <p> tag
+      // Wrap each paragraph in a p tag
       return <p key={`p-${pIndex}`} className="message-content">{processedParts}</p>;
     });
   };
