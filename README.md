@@ -1,15 +1,45 @@
-# Ansh & Riley Full-Stack Template
+# Vesty UI Proto
 
-This is a full-stack template project for Software Composers to create  applications with AI.
+A Next.js application featuring LaTeX rendering and transcript processing capabilities.
 
-## Getting started
-To create a new project, you go to `/paths`, choose from our list of Paths, and then use Cursor's Composer feature to quickly scaffold your project!
+## Features
 
-You can also edit the Path's prompt template to be whatever you like!
+- Real-time LaTeX rendering using KaTeX
+- Transcript processing with timecode support
+- Chat interface with AI integration
+- Floating video player with controls
+- Backend transcript processing tools
 
-## Technologies used
-This doesn't really matter, but is useful for the AI to understand more about this project. We are using the following technologies
-- React with Next.js 14 App Router
-- TailwindCSS
-- Firebase Auth, Storage, and Database
-- Multiple AI endpoints including OpenAI, Anthropic, and Replicate using Vercel's AI SDK
+## Setup
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Run the development server:
+```bash
+npm run dev
+```
+
+3. For transcript processing:
+```bash
+cd backend
+python transcript.py
+```
+
+## Project Structure
+
+- `src/app` - Next.js pages and API routes
+- `src/components` - React components
+- `src/lib` - Utilities and contexts
+- `backend` - Python scripts for transcript processing
+
+## Technologies Used
+
+- Next.js 14
+- React
+- TypeScript
+- KaTeX
+- Python (for transcript processing)
+- Tailwind CSS
