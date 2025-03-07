@@ -9,7 +9,7 @@ export default function EmptyState({ onShowVideo }: EmptyStateProps = {}) {
     <div className="flex flex-col items-center justify-center h-full max-w-xl mx-auto text-center">
       <div className="mb-1">
         <h1 className="text-4xl font-serif text-gray-800 mb-1.5 tracking-tight">How can I help with Differential Equations?</h1>
-        <p className="text-gray-400 text-xs tracking-wide font-light">choose what you'd like me to help you with</p>
+        <p className="text-gray-400 text-xs tracking-wide font-light">choose what you&apos;d like me to help you with</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full max-w-xl mx-auto">
@@ -50,7 +50,7 @@ export default function EmptyState({ onShowVideo }: EmptyStateProps = {}) {
             </div>
             <div className="flex-1">
               <h3 className="font-medium text-gray-800 text-sm mb-0.5">Explain the lecture</h3>
-              <p className="text-gray-500 text-xs leading-snug">Get clear explanations of complex concepts from the professor's lecture.</p>
+              <p className="text-gray-500 text-xs leading-snug">Get clear explanations of complex concepts from the professor&apos;s lecture.</p>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function EmptyState({ onShowVideo }: EmptyStateProps = {}) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          Start Today's Lecture
+          Start Today&apos;s Lecture
         </button>
       )}
     </div>
