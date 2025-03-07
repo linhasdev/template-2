@@ -1,0 +1,836 @@
+{
+  "transcripts": [
+    {
+      "timecode": "00:00:00",
+      "transcript": "Let's now introduce ourselves to the idea"
+    },
+    {
+      "timecode": "00:00:03",
+      "transcript": "of a differential equation."
+    },
+    {
+      "timecode": "00:00:06",
+      "transcript": "And as we'll see, differential equations are super useful"
+    },
+    {
+      "timecode": "00:00:08",
+      "transcript": "for modeling and simulating phenomena"
+    },
+    {
+      "timecode": "00:00:11",
+      "transcript": "and understanding how they operate."
+    },
+    {
+      "timecode": "00:00:13",
+      "transcript": "But we'll get into that later."
+    },
+    {
+      "timecode": "00:00:15",
+      "transcript": "For now, let's just think about, or at least look at,"
+    },
+    {
+      "timecode": "00:00:18",
+      "transcript": "what a differential equation actually is."
+    },
+    {
+      "timecode": "00:00:22",
+      "transcript": "So if I were to write,"
+    },
+    {
+      "timecode": "00:00:24",
+      "transcript": "so here's an example of a differential equation."
+    },
+    {
+      "timecode": "00:00:26",
+      "transcript": "If I were to write that the second derivative of y"
+    },
+    {
+      "timecode": "00:00:30",
+      "transcript": "plus two times the first derivative of y"
+    },
+    {
+      "timecode": "00:00:33",
+      "transcript": "is equal to three times y,"
+    },
+    {
+      "timecode": "00:00:36",
+      "transcript": "this right over here is a differential equation."
+    },
+    {
+      "timecode": "00:00:38",
+      "transcript": "Another way we could write it,"
+    },
+    {
+      "timecode": "00:00:39",
+      "transcript": "if we said that y is a function of x,"
+    },
+    {
+      "timecode": "00:00:42",
+      "transcript": "we could write this in function notation."
+    },
+    {
+      "timecode": "00:00:44",
+      "transcript": "We could write the second derivative of our function"
+    },
+    {
+      "timecode": "00:00:46",
+      "transcript": "with respect to x"
+    },
+    {
+      "timecode": "00:00:48",
+      "transcript": "plus two times the first derivative of our function"
+    },
+    {
+      "timecode": "00:00:51",
+      "transcript": "is equal to three times our function."
+    },
+    {
+      "timecode": "00:00:55",
+      "transcript": "Or if we wanted to use the Leibniz notation,"
+    },
+    {
+      "timecode": "00:00:58",
+      "transcript": "we could also write,"
+    },
+    {
+      "timecode": "00:01:00",
+      "transcript": "we could also write the second derivative of y"
+    },
+    {
+      "timecode": "00:01:04",
+      "transcript": "with respect to x"
+    },
+    {
+      "timecode": "00:01:06",
+      "transcript": "plus two times the first derivative of y"
+    },
+    {
+      "timecode": "00:01:10",
+      "transcript": "with respect to x"
+    },
+    {
+      "timecode": "00:01:11",
+      "transcript": "is equal to three times y."
+    },
+    {
+      "timecode": "00:01:14",
+      "transcript": "All three of these, I guess, equations"
+    },
+    {
+      "timecode": "00:01:17",
+      "transcript": "are really representing the same thing."
+    },
+    {
+      "timecode": "00:01:19",
+      "transcript": "They're saying, okay, can I find functions"
+    },
+    {
+      "timecode": "00:01:21",
+      "transcript": "where the second derivative of the function"
+    },
+    {
+      "timecode": "00:01:23",
+      "transcript": "plus two times the first derivative of the function"
+    },
+    {
+      "timecode": "00:01:25",
+      "transcript": "is equal to three times the function itself?"
+    },
+    {
+      "timecode": "00:01:28",
+      "transcript": "Just to be clear,"
+    },
+    {
+      "timecode": "00:01:29",
+      "transcript": "these are all essentially saying the same thing."
+    },
+    {
+      "timecode": "00:01:34",
+      "transcript": "You might have just caught from how I described it"
+    },
+    {
+      "timecode": "00:01:36",
+      "transcript": "that the solution to a differential equation"
+    },
+    {
+      "timecode": "00:01:38",
+      "transcript": "is a function or a class of functions."
+    },
+    {
+      "timecode": "00:01:41",
+      "transcript": "It's not just a value or a set of values."
+    },
+    {
+      "timecode": "00:01:44",
+      "transcript": "The solution here,"
+    },
+    {
+      "timecode": "00:01:46",
+      "transcript": "so the solution to a differential equation"
+    },
+    {
+      "timecode": "00:01:50",
+      "transcript": "is a function."
+    },
+    {
+      "timecode": "00:01:53",
+      "transcript": "Is a function or a set of functions"
+    },
+    {
+      "timecode": "00:01:55",
+      "transcript": "or a class of functions."
+    },
+    {
+      "timecode": "00:01:57",
+      "transcript": "It's important to contrast this"
+    },
+    {
+      "timecode": "00:01:58",
+      "transcript": "relative to a traditional equation."
+    },
+    {
+      "timecode": "00:02:00",
+      "transcript": "Let me write that down."
+    },
+    {
+      "timecode": "00:02:02",
+      "transcript": "A traditional equation,"
+    },
+    {
+      "timecode": "00:02:03",
+      "transcript": "I guess I could say,"
+    },
+    {
+      "timecode": "00:02:04",
+      "transcript": "maybe I shouldn't say traditional equation."
+    },
+    {
+      "timecode": "00:02:06",
+      "transcript": "Differential equations have been around for a while."
+    },
+    {
+      "timecode": "00:02:09",
+      "transcript": "Let me write this as a,"
+    },
+    {
+      "timecode": "00:02:10",
+      "transcript": "maybe an algebraic equation that you're familiar with."
+    },
+    {
+      "timecode": "00:02:14",
+      "transcript": "Algebraic, an algebraic equation"
+    },
+    {
+      "timecode": "00:02:17",
+      "transcript": "might look something like,"
+    },
+    {
+      "timecode": "00:02:19",
+      "transcript": "and I'll just write a simple quadratic,"
+    },
+    {
+      "timecode": "00:02:21",
+      "transcript": "say x squared,"
+    },
+    {
+      "timecode": "00:02:24",
+      "transcript": "x squared plus three x plus two"
+    },
+    {
+      "timecode": "00:02:28",
+      "transcript": "is equal to zero."
+    },
+    {
+      "timecode": "00:02:30",
+      "transcript": "The solutions to this algebraic equation"
+    },
+    {
+      "timecode": "00:02:32",
+      "transcript": "are going to be numbers or a set of numbers."
+    },
+    {
+      "timecode": "00:02:35",
+      "transcript": "We can solve this as going to be"
+    },
+    {
+      "timecode": "00:02:37",
+      "transcript": "x plus two times x plus one"
+    },
+    {
+      "timecode": "00:02:40",
+      "transcript": "is equal to zero."
+    },
+    {
+      "timecode": "00:02:42",
+      "transcript": "So x could be equal to negative two"
+    },
+    {
+      "timecode": "00:02:44",
+      "transcript": "or x could be equal to negative one."
+    },
+    {
+      "timecode": "00:02:47",
+      "transcript": "The solutions here are numbers"
+    },
+    {
+      "timecode": "00:02:49",
+      "transcript": "or a set of values"
+    },
+    {
+      "timecode": "00:02:53",
+      "transcript": "that satisfy the equation."
+    },
+    {
+      "timecode": "00:02:56",
+      "transcript": "Here it's a relationship between a function and its derivatives."
+    },
+    {
+      "timecode": "00:02:59",
+      "transcript": "So the solutions or the solution"
+    },
+    {
+      "timecode": "00:03:00",
+      "transcript": "is going to be a function or a set of functions."
+    },
+    {
+      "timecode": "00:03:04",
+      "transcript": "Let's make that a little bit more tangible."
+    },
+    {
+      "timecode": "00:03:06",
+      "transcript": "What would a solution to something"
+    },
+    {
+      "timecode": "00:03:07",
+      "transcript": "like any of these three,"
+    },
+    {
+      "timecode": "00:03:09",
+      "transcript": "which really represent the same thing,"
+    },
+    {
+      "timecode": "00:03:10",
+      "transcript": "what would a solution actually look like?"
+    },
+    {
+      "timecode": "00:03:12",
+      "transcript": "Actually, let me move over to the,"
+    },
+    {
+      "timecode": "00:03:14",
+      "transcript": "let me move this over a little bit."
+    },
+    {
+      "timecode": "00:03:17",
+      "transcript": "Move this a little bit"
+    },
+    {
+      "timecode": "00:03:19",
+      "transcript": "so that we can take a look"
+    },
+    {
+      "timecode": "00:03:21",
+      "transcript": "at what some of these solutions could look like."
+    },
+    {
+      "timecode": "00:03:23",
+      "transcript": "Let me erase this little stuff"
+    },
+    {
+      "timecode": "00:03:26",
+      "transcript": "that I have right over here."
+    },
+    {
+      "timecode": "00:03:28",
+      "transcript": "I'm just going to give you examples of solutions here."
+    },
+    {
+      "timecode": "00:03:31",
+      "transcript": "We'll verify that these indeed are solutions for,"
+    },
+    {
+      "timecode": "00:03:35",
+      "transcript": "I guess this is really just one differential equation"
+    },
+    {
+      "timecode": "00:03:37",
+      "transcript": "represented in different ways,"
+    },
+    {
+      "timecode": "00:03:38",
+      "transcript": "but I'll hopefully appreciate"
+    },
+    {
+      "timecode": "00:03:39",
+      "transcript": "what a solution to a differential equation looks like"
+    },
+    {
+      "timecode": "00:03:42",
+      "transcript": "and that there is often more than one solution"
+    },
+    {
+      "timecode": "00:03:45",
+      "transcript": "or that there's a whole class of functions"
+    },
+    {
+      "timecode": "00:03:47",
+      "transcript": "that could be a solution."
+    },
+    {
+      "timecode": "00:03:50",
+      "transcript": "One solution to this differential equation,"
+    },
+    {
+      "timecode": "00:03:53",
+      "transcript": "and I'll just write it as our first one."
+    },
+    {
+      "timecode": "00:03:55",
+      "transcript": "One solution, I'll call it Y1,"
+    },
+    {
+      "timecode": "00:03:57",
+      "transcript": "and I could even write it as Y1 of X"
+    },
+    {
+      "timecode": "00:03:59",
+      "transcript": "to make it explicit that it is a function of X."
+    },
+    {
+      "timecode": "00:04:02",
+      "transcript": "One solution is Y1 of X"
+    },
+    {
+      "timecode": "00:04:04",
+      "transcript": "is equal to E to the negative three X."
+    },
+    {
+      "timecode": "00:04:08",
+      "transcript": "I encourage you to pause this video right now"
+    },
+    {
+      "timecode": "00:04:10",
+      "transcript": "and find the first derivative of Y1"
+    },
+    {
+      "timecode": "00:04:13",
+      "transcript": "and the second derivative of Y1"
+    },
+    {
+      "timecode": "00:04:15",
+      "transcript": "and verify that it does indeed satisfy"
+    },
+    {
+      "timecode": "00:04:18",
+      "transcript": "this differential equation."
+    },
+    {
+      "timecode": "00:04:20",
+      "transcript": "I'm assuming you've had a go at it,"
+    },
+    {
+      "timecode": "00:04:23",
+      "transcript": "so let's work through this together."
+    },
+    {
+      "timecode": "00:04:24",
+      "transcript": "That's Y1."
+    },
+    {
+      "timecode": "00:04:26",
+      "transcript": "The first derivative of Y1,"
+    },
+    {
+      "timecode": "00:04:29",
+      "transcript": "well this is going to be,"
+    },
+    {
+      "timecode": "00:04:30",
+      "transcript": "let's see, we just have to do the chain rule here,"
+    },
+    {
+      "timecode": "00:04:31",
+      "transcript": "derivative of negative three X"
+    },
+    {
+      "timecode": "00:04:33",
+      "transcript": "with respect to X is just negative three"
+    },
+    {
+      "timecode": "00:04:35",
+      "transcript": "and the derivative of E to the negative three X"
+    },
+    {
+      "timecode": "00:04:37",
+      "transcript": "with respect to negative three X"
+    },
+    {
+      "timecode": "00:04:39",
+      "transcript": "is just E to the negative three X."
+    },
+    {
+      "timecode": "00:04:42",
+      "transcript": "If we take the second derivative,"
+    },
+    {
+      "timecode": "00:04:44",
+      "transcript": "Y of Y1,"
+    },
+    {
+      "timecode": "00:04:46",
+      "transcript": "this is equal to,"
+    },
+    {
+      "timecode": "00:04:47",
+      "transcript": "same exact idea,"
+    },
+    {
+      "timecode": "00:04:49",
+      "transcript": "derivative of this is negative three"
+    },
+    {
+      "timecode": "00:04:50",
+      "transcript": "times negative three is going to be"
+    },
+    {
+      "timecode": "00:04:52",
+      "transcript": "nine E to the negative three X."
+    },
+    {
+      "timecode": "00:04:56",
+      "transcript": "Now we can just substitute these values"
+    },
+    {
+      "timecode": "00:04:57",
+      "transcript": "into the differential equation"
+    },
+    {
+      "timecode": "00:04:58",
+      "transcript": "or these expressions"
+    },
+    {
+      "timecode": "00:04:59",
+      "transcript": "into the differential equation"
+    },
+    {
+      "timecode": "00:05:00",
+      "transcript": "to verify that this is indeed"
+    },
+    {
+      "timecode": "00:05:02",
+      "transcript": "going to be true for this function."
+    },
+    {
+      "timecode": "00:05:05",
+      "transcript": "Let's verify that."
+    },
+    {
+      "timecode": "00:05:08",
+      "transcript": "We first have the second derivative of Y,"
+    },
+    {
+      "timecode": "00:05:13",
+      "transcript": "so that's that term right over there."
+    },
+    {
+      "timecode": "00:05:15",
+      "transcript": "We have nine E to the negative three X"
+    },
+    {
+      "timecode": "00:05:22",
+      "transcript": "plus two times the first derivative."
+    },
+    {
+      "timecode": "00:05:26",
+      "transcript": "That's going to be two times this right over here."
+    },
+    {
+      "timecode": "00:05:30",
+      "transcript": "It's going to be minus six,"
+    },
+    {
+      "timecode": "00:05:33",
+      "transcript": "I'll just write plus negative six"
+    },
+    {
+      "timecode": "00:05:36",
+      "transcript": "E to the negative three X."
+    },
+    {
+      "timecode": "00:05:38",
+      "transcript": "Notice I just took this"
+    },
+    {
+      "timecode": "00:05:38",
+      "transcript": "two times the first derivative,"
+    },
+    {
+      "timecode": "00:05:40",
+      "transcript": "two times the first derivative"
+    },
+    {
+      "timecode": "00:05:42",
+      "transcript": "is going to be equal to"
+    },
+    {
+      "timecode": "00:05:44",
+      "transcript": "or needs to be equal to"
+    },
+    {
+      "timecode": "00:05:46",
+      "transcript": "if this indeed does satisfy,"
+    },
+    {
+      "timecode": "00:05:48",
+      "transcript": "if Y1 does indeed satisfy"
+    },
+    {
+      "timecode": "00:05:50",
+      "transcript": "the differential equation,"
+    },
+    {
+      "timecode": "00:05:53",
+      "transcript": "this needs to be equal to three times Y."
+    },
+    {
+      "timecode": "00:05:55",
+      "transcript": "Three times Y is"
+    },
+    {
+      "timecode": "00:05:56",
+      "transcript": "three times E to the negative three X."
+    },
+    {
+      "timecode": "00:05:59",
+      "transcript": "Three E to the negative three X."
+    },
+    {
+      "timecode": "00:06:03",
+      "transcript": "Let's see if that indeed is true."
+    },
+    {
+      "timecode": "00:06:05",
+      "transcript": "These two terms right over here,"
+    },
+    {
+      "timecode": "00:06:08",
+      "transcript": "nine E to the negative three X,"
+    },
+    {
+      "timecode": "00:06:10",
+      "transcript": "essentially minus six E to the negative three X,"
+    },
+    {
+      "timecode": "00:06:12",
+      "transcript": "that's going to be three E to the negative three X,"
+    },
+    {
+      "timecode": "00:06:16",
+      "transcript": "which is indeed equal to"
+    },
+    {
+      "timecode": "00:06:19",
+      "transcript": "three E to the negative three X."
+    },
+    {
+      "timecode": "00:06:23",
+      "transcript": "Y1 is indeed a solution"
+    },
+    {
+      "timecode": "00:06:26",
+      "transcript": "to this differential equation."
+    },
+    {
+      "timecode": "00:06:28",
+      "transcript": "As we'll see,"
+    },
+    {
+      "timecode": "00:06:29",
+      "transcript": "it is not the only solution"
+    },
+    {
+      "timecode": "00:06:31",
+      "transcript": "to this differential equation."
+    },
+    {
+      "timecode": "00:06:32",
+      "transcript": "For example,"
+    },
+    {
+      "timecode": "00:06:38",
+      "transcript": "let's say Y2"
+    },
+    {
+      "timecode": "00:06:39",
+      "transcript": "is equal to"
+    },
+    {
+      "timecode": "00:06:41",
+      "transcript": "E to the X"
+    },
+    {
+      "timecode": "00:06:43",
+      "transcript": "is also a solution"
+    },
+    {
+      "timecode": "00:06:45",
+      "transcript": "to this differential equation."
+    },
+    {
+      "timecode": "00:06:46",
+      "transcript": "I encourage you to pause the video again"
+    },
+    {
+      "timecode": "00:06:48",
+      "transcript": "and verify that it's a solution."
+    },
+    {
+      "timecode": "00:06:50",
+      "transcript": "Assuming you've had a go at it,"
+    },
+    {
+      "timecode": "00:06:52",
+      "transcript": "the first derivative of this,"
+    },
+    {
+      "timecode": "00:06:53",
+      "transcript": "this is pretty straightforward,"
+    },
+    {
+      "timecode": "00:06:54",
+      "transcript": "is E to the X."
+    },
+    {
+      "timecode": "00:06:55",
+      "transcript": "Second derivative"
+    },
+    {
+      "timecode": "00:06:56",
+      "transcript": "is one of the profound things"
+    },
+    {
+      "timecode": "00:06:58",
+      "transcript": "of the exponential function."
+    },
+    {
+      "timecode": "00:06:59",
+      "transcript": "The second derivative here"
+    },
+    {
+      "timecode": "00:07:00",
+      "transcript": "is also E to the X."
+    },
+    {
+      "timecode": "00:07:02",
+      "transcript": "If I have"
+    },
+    {
+      "timecode": "00:07:03",
+      "transcript": "the second derivative,"
+    },
+    {
+      "timecode": "00:07:05",
+      "transcript": "let me just do it in those same colors."
+    },
+    {
+      "timecode": "00:07:07",
+      "transcript": "The second derivative"
+    },
+    {
+      "timecode": "00:07:08",
+      "transcript": "is going to be"
+    },
+    {
+      "timecode": "00:07:09",
+      "transcript": "E to the X"
+    },
+    {
+      "timecode": "00:07:11",
+      "transcript": "plus two times E to the X"
+    },
+    {
+      "timecode": "00:07:14",
+      "transcript": "plus two times E to the X"
+    },
+    {
+      "timecode": "00:07:17",
+      "transcript": "is indeed"
+    },
+    {
+      "timecode": "00:07:18",
+      "transcript": "going to be equal to"
+    },
+    {
+      "timecode": "00:07:20",
+      "transcript": "three times E to the X."
+    },
+    {
+      "timecode": "00:07:21",
+      "transcript": "Three times E to the X."
+    },
+    {
+      "timecode": "00:07:23",
+      "transcript": "This is absolutely going to be true."
+    },
+    {
+      "timecode": "00:07:24",
+      "transcript": "E to the X plus two to the X"
+    },
+    {
+      "timecode": "00:07:25",
+      "transcript": "is three E to the X."
+    },
+    {
+      "timecode": "00:07:28",
+      "transcript": "Y2 is also a solution"
+    },
+    {
+      "timecode": "00:07:30",
+      "transcript": "to this differential equation."
+    },
+    {
+      "timecode": "00:07:33",
+      "transcript": "That's a start."
+    },
+    {
+      "timecode": "00:07:34",
+      "transcript": "In the next few videos,"
+    },
+    {
+      "timecode": "00:07:35",
+      "transcript": "we'll explore this more."
+    },
+    {
+      "timecode": "00:07:36",
+      "transcript": "We'll start to see"
+    },
+    {
+      "timecode": "00:07:36",
+      "transcript": "what the solutions look like,"
+    },
+    {
+      "timecode": "00:07:38",
+      "transcript": "what classes of solutions are,"
+    },
+    {
+      "timecode": "00:07:39",
+      "transcript": "techniques for solving them,"
+    },
+    {
+      "timecode": "00:07:41",
+      "transcript": "visualizing solutions"
+    },
+    {
+      "timecode": "00:07:42",
+      "transcript": "to differential equations,"
+    },
+    {
+      "timecode": "00:07:43",
+      "transcript": "and a whole toolkit"
+    },
+    {
+      "timecode": "00:07:44",
+      "transcript": "for kind of digging in deeper."
+    }
+  ]
+}

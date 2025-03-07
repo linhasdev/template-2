@@ -1,4 +1,14 @@
-import "./globals.css";
+import { ChatbotProvider } from '@/lib/contexts/ChatbotContext';
+import './globals.css';
+import { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'Next.js Template',
+  description: 'Next.js Template with Tailwind CSS, TypeScript, and more.',
+};
 
 export default function RootLayout({
   children,
@@ -7,7 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        {/* Existing code */}
+      </head>
+      <body className={inter.className}>
+        <ChatbotProvider>
+          {children}
+        </ChatbotProvider>
+      </body>
     </html>
   );
 }

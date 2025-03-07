@@ -1,0 +1,740 @@
+{
+  "transcripts": [
+    {
+      "timecode": "00:00:00",
+      "transcript": "Vamos, agora, nos apresentarmos"
+    },
+    {
+      "timecode": "00:00:02",
+      "transcript": "à ideia de uma equação diferencial."
+    },
+    {
+      "timecode": "00:00:06",
+      "transcript": "E, como veremos, as equações diferenciais são super-úteis"
+    },
+    {
+      "timecode": "00:00:08",
+      "transcript": "para modelar e simular fenômenos"
+    },
+    {
+      "timecode": "00:00:11",
+      "transcript": "e entender como eles operam."
+    },
+    {
+      "timecode": "00:00:14",
+      "transcript": "Mas vamos entrar nisso mais tarde."
+    },
+    {
+      "timecode": "00:00:15",
+      "transcript": "Por enquanto, vamos apenas pensar ou, pelo menos, olhar"
+    },
+    {
+      "timecode": "00:00:17",
+      "transcript": "o que uma equação diferencial realmente é."
+    },
+    {
+      "timecode": "00:00:21",
+      "transcript": "Então, se eu estivesse a escrever..."
+    },
+    {
+      "timecode": "00:00:24",
+      "transcript": "Então, aqui está um exemplo de uma equação diferencial."
+    },
+    {
+      "timecode": "00:00:26",
+      "transcript": "Se eu estivesse a escrever que a segunda derivativa de y"
+    },
+    {
+      "timecode": "00:00:30",
+      "transcript": "mais 2 vezes a primeira derivativa de y"
+    },
+    {
+      "timecode": "00:00:33",
+      "transcript": "é igual a 3 vezes y,"
+    },
+    {
+      "timecode": "00:00:36",
+      "transcript": "isso aqui é uma equação diferencial."
+    },
+    {
+      "timecode": "00:00:38",
+      "transcript": "Outra maneira de escrever..."
+    },
+    {
+      "timecode": "00:00:39",
+      "transcript": "Se dissermos que y é uma função de x,"
+    },
+    {
+      "timecode": "00:00:42",
+      "transcript": "podemos escrever isso em notação de função."
+    },
+    {
+      "timecode": "00:00:44",
+      "transcript": "Podemos escrever a segunda derivativa de nossa função"
+    },
+    {
+      "timecode": "00:00:46",
+      "transcript": "com respeito a x,"
+    },
+    {
+      "timecode": "00:00:48",
+      "transcript": "mais 2 vezes a primeira derivativa de nossa função"
+    },
+    {
+      "timecode": "00:00:51",
+      "transcript": "é igual a 3 vezes nossa função."
+    },
+    {
+      "timecode": "00:00:55",
+      "transcript": "Ou, se quisermos usar a notação de Leibniz,"
+    },
+    {
+      "timecode": "00:00:58",
+      "transcript": "podemos escrever a segunda derivativa de y"
+    },
+    {
+      "timecode": "00:01:03",
+      "transcript": "com respeito a x,"
+    },
+    {
+      "timecode": "00:01:06",
+      "transcript": "mais 2 vezes a primeira derivativa de y"
+    },
+    {
+      "timecode": "00:01:10",
+      "transcript": "com respeito a x é igual a 3 vezes y."
+    },
+    {
+      "timecode": "00:01:14",
+      "transcript": "Todas essas três equações realmente representam a mesma coisa."
+    },
+    {
+      "timecode": "00:01:19",
+      "transcript": "Elas dizem, ok, posso encontrar funções"
+    },
+    {
+      "timecode": "00:01:21",
+      "transcript": "em que a segunda derivativa da função"
+    },
+    {
+      "timecode": "00:01:23",
+      "transcript": "mais 2 vezes a primeira derivativa da função"
+    },
+    {
+      "timecode": "00:01:25",
+      "transcript": "é igual a 3 vezes a função em si mesmo."
+    },
+    {
+      "timecode": "00:01:28",
+      "transcript": "Então, só para ser claro,"
+    },
+    {
+      "timecode": "00:01:30",
+      "transcript": "essas são todas, essencialmente,"
+    },
+    {
+      "timecode": "00:01:32",
+      "transcript": "dizendo a mesma coisa."
+    },
+    {
+      "timecode": "00:01:34",
+      "transcript": "E você pode ter pegado,"
+    },
+    {
+      "timecode": "00:01:35",
+      "transcript": "de como eu a descrevi,"
+    },
+    {
+      "timecode": "00:01:36",
+      "transcript": "que a solução a uma equação diferencial"
+    },
+    {
+      "timecode": "00:01:38",
+      "transcript": "é uma função ou uma classe de funções,"
+    },
+    {
+      "timecode": "00:01:41",
+      "transcript": "não é apenas um valor ou um setor de valores."
+    },
+    {
+      "timecode": "00:01:44",
+      "transcript": "Então, a solução aqui,"
+    },
+    {
+      "timecode": "00:01:46",
+      "transcript": "a solução a uma equação diferencial"
+    },
+    {
+      "timecode": "00:01:51",
+      "transcript": "é uma função,"
+    },
+    {
+      "timecode": "00:01:52",
+      "transcript": "é uma função ou um setor de funções"
+    },
+    {
+      "timecode": "00:01:55",
+      "transcript": "ou uma classe de funções."
+    },
+    {
+      "timecode": "00:01:57",
+      "transcript": "É importante contrastar isso"
+    },
+    {
+      "timecode": "00:01:58",
+      "transcript": "com relação a uma equação tradicional."
+    },
+    {
+      "timecode": "00:02:00",
+      "transcript": "Então, deixe-me escrever isso."
+    },
+    {
+      "timecode": "00:02:01",
+      "transcript": "Então, uma equação tradicional,"
+    },
+    {
+      "timecode": "00:02:03",
+      "transcript": "eu acho que eu poderia dizer,"
+    },
+    {
+      "timecode": "00:02:04",
+      "transcript": "talvez eu não deveria dizer uma equação tradicional,"
+    },
+    {
+      "timecode": "00:02:06",
+      "transcript": "equações diferenciais estão por aí por um tempo."
+    },
+    {
+      "timecode": "00:02:08",
+      "transcript": "Então, deixe-me escrever isso como"
+    },
+    {
+      "timecode": "00:02:10",
+      "transcript": "talvez uma equação algébrica que você está famosa com."
+    },
+    {
+      "timecode": "00:02:16",
+      "transcript": "Uma equação algébrica"
+    },
+    {
+      "timecode": "00:02:17",
+      "transcript": "pode parecer com algo como,"
+    },
+    {
+      "timecode": "00:02:19",
+      "transcript": "e eu apenas escrevo um quadrado simples,"
+    },
+    {
+      "timecode": "00:02:21",
+      "transcript": "digamos, x²"
+    },
+    {
+      "timecode": "00:02:25",
+      "transcript": "x² mais 3x"
+    },
+    {
+      "timecode": "00:02:27",
+      "transcript": "mais 2 é igual a zero."
+    },
+    {
+      "timecode": "00:02:30",
+      "transcript": "As soluções a essa equação algébrica"
+    },
+    {
+      "timecode": "00:02:32",
+      "transcript": "serão números ou um setor de números."
+    },
+    {
+      "timecode": "00:02:35",
+      "transcript": "Podemos resolver isso como x mais 2"
+    },
+    {
+      "timecode": "00:02:38",
+      "transcript": "vezes x mais 1 é igual a zero."
+    },
+    {
+      "timecode": "00:02:42",
+      "transcript": "Então, x poderia ser igual a negativo 2"
+    },
+    {
+      "timecode": "00:02:44",
+      "transcript": "ou x poderia ser igual a negativo 1."
+    },
+    {
+      "timecode": "00:02:47",
+      "transcript": "As soluções aqui são números"
+    },
+    {
+      "timecode": "00:02:49",
+      "transcript": "ou valores ou setas de valores"
+    },
+    {
+      "timecode": "00:02:53",
+      "transcript": "que satisfazem a equação."
+    },
+    {
+      "timecode": "00:02:56",
+      "transcript": "Aqui é uma relação entre uma função e seus derivados."
+    },
+    {
+      "timecode": "00:02:59",
+      "transcript": "Então, as soluções"
+    },
+    {
+      "timecode": "00:03:00",
+      "transcript": "serão uma função ou um setor de funções."
+    },
+    {
+      "timecode": "00:03:04",
+      "transcript": "Agora, vamos fazer isso um pouco mais tângilo."
+    },
+    {
+      "timecode": "00:03:06",
+      "transcript": "O que uma solução para algo"
+    },
+    {
+      "timecode": "00:03:07",
+      "transcript": "como qualquer um destes três,"
+    },
+    {
+      "timecode": "00:03:09",
+      "transcript": "que realmente representam a mesma coisa,"
+    },
+    {
+      "timecode": "00:03:10",
+      "transcript": "o que uma solução realmente seria?"
+    },
+    {
+      "timecode": "00:03:12",
+      "transcript": "Deixe-me mover isso um pouco."
+    },
+    {
+      "timecode": "00:03:16",
+      "transcript": "Vou mover isso um pouco"
+    },
+    {
+      "timecode": "00:03:18",
+      "transcript": "para que possamos dar uma olhada"
+    },
+    {
+      "timecode": "00:03:20",
+      "transcript": "no que algumas destas soluções podem parecer."
+    },
+    {
+      "timecode": "00:03:23",
+      "transcript": "Deixe-me erguer esta pequena coisa"
+    },
+    {
+      "timecode": "00:03:26",
+      "transcript": "que tenho aqui."
+    },
+    {
+      "timecode": "00:03:28",
+      "transcript": "Vou dar exemplos de soluções aqui."
+    },
+    {
+      "timecode": "00:03:31",
+      "transcript": "Vamos verificar que estas são, de fato,"
+    },
+    {
+      "timecode": "00:03:34",
+      "transcript": "soluções para, acho que é realmente"
+    },
+    {
+      "timecode": "00:03:36",
+      "transcript": "apenas uma equação diferencial representada"
+    },
+    {
+      "timecode": "00:03:37",
+      "transcript": "de diferentes maneiras,"
+    },
+    {
+      "timecode": "00:03:38",
+      "transcript": "mas esperamos apreciar o que uma solução"
+    },
+    {
+      "timecode": "00:03:40",
+      "transcript": "para uma equação diferencial parece."
+    },
+    {
+      "timecode": "00:03:42",
+      "transcript": "E que há muitas vezes mais do que uma solução"
+    },
+    {
+      "timecode": "00:03:45",
+      "transcript": "ou que há uma classe inteira de funções"
+    },
+    {
+      "timecode": "00:03:47",
+      "transcript": "que poderia ser uma solução."
+    },
+    {
+      "timecode": "00:03:50",
+      "transcript": "Então, uma solução para esta equação diferencial,"
+    },
+    {
+      "timecode": "00:03:53",
+      "transcript": "e vou apenas a escrever como a primeira,"
+    },
+    {
+      "timecode": "00:03:54",
+      "transcript": "uma solução, vou chamá-la de y₁,"
+    },
+    {
+      "timecode": "00:03:57",
+      "transcript": "e posso até escrever como y₁x"
+    },
+    {
+      "timecode": "00:03:59",
+      "transcript": "para fazê-la explícita que é uma função de x,"
+    },
+    {
+      "timecode": "00:04:02",
+      "transcript": "uma solução é y₁x igual a e⁻³x."
+    },
+    {
+      "timecode": "00:04:08",
+      "transcript": "E eu te encorajo a pausar este vídeo agora"
+    },
+    {
+      "timecode": "00:04:10",
+      "transcript": "e encontrar a primeira derivativa de y₁"
+    },
+    {
+      "timecode": "00:04:13",
+      "transcript": "e a segunda derivativa de y₁"
+    },
+    {
+      "timecode": "00:04:15",
+      "transcript": "e verificar que ela, de fato,"
+    },
+    {
+      "timecode": "00:04:17",
+      "transcript": "satisfaz esta equação diferencial."
+    },
+    {
+      "timecode": "00:04:20",
+      "transcript": "Então, eu estou assumindo que você teve um golpe."
+    },
+    {
+      "timecode": "00:04:22",
+      "transcript": "Então, vamos trabalhar isso juntos."
+    },
+    {
+      "timecode": "00:04:24",
+      "transcript": "Então, isso é y₁."
+    },
+    {
+      "timecode": "00:04:25",
+      "transcript": "Então, a primeira derivativa de y₁,"
+    },
+    {
+      "timecode": "00:04:29",
+      "transcript": "bem, isso vai ser,"
+    },
+    {
+      "timecode": "00:04:30",
+      "transcript": "vamos ver, temos que fazer a regra aqui,"
+    },
+    {
+      "timecode": "00:04:31",
+      "transcript": "a derivativa de e⁻³x"
+    },
+    {
+      "timecode": "00:04:33",
+      "transcript": "com respeito a x é apenas e⁻³,"
+    },
+    {
+      "timecode": "00:04:35",
+      "transcript": "e a derivativa de e⁻³x"
+    },
+    {
+      "timecode": "00:04:37",
+      "transcript": "com respeito a e⁻³x é apenas e⁻³x."
+    },
+    {
+      "timecode": "00:04:42",
+      "transcript": "E se nós pegarmos a segunda derivativa,"
+    },
+    {
+      "timecode": "00:04:45",
+      "transcript": "y₁, isso é igual a,"
+    },
+    {
+      "timecode": "00:04:47",
+      "transcript": "a mesma ideia exata,"
+    },
+    {
+      "timecode": "00:04:49",
+      "transcript": "a derivativa disso é e⁻³,"
+    },
+    {
+      "timecode": "00:04:51",
+      "transcript": "vezes e⁻³ vai ser 9e⁻³x."
+    },
+    {
+      "timecode": "00:04:56",
+      "transcript": "E agora, nós podemos substituir estes valores"
+    },
+    {
+      "timecode": "00:04:57",
+      "transcript": "para a equação diferencial,"
+    },
+    {
+      "timecode": "00:04:59",
+      "transcript": "ou estas expressões para a equação diferencial"
+    },
+    {
+      "timecode": "00:05:00",
+      "transcript": "para verificar que, de fato,"
+    },
+    {
+      "timecode": "00:05:02",
+      "transcript": "isso vai ser verdadeiro para esta função."
+    },
+    {
+      "timecode": "00:05:05",
+      "transcript": "Então, vamos verificar isso."
+    },
+    {
+      "timecode": "00:05:07",
+      "transcript": "Então, vamos verificar."
+    },
+    {
+      "timecode": "00:05:08",
+      "transcript": "Então, primeiro temos a segunda derivativa de y,"
+    },
+    {
+      "timecode": "00:05:13",
+      "transcript": "então esse é o termo ali."
+    },
+    {
+      "timecode": "00:05:14",
+      "transcript": "Então, nós temos 9e⁻³x"
+    },
+    {
+      "timecode": "00:05:22",
+      "transcript": "mais 2 vezes a primeira derivativa."
+    },
+    {
+      "timecode": "00:05:26",
+      "transcript": "Então, isso vai ser 2 vezes isto aqui."
+    },
+    {
+      "timecode": "00:05:30",
+      "transcript": "Então, vai ser menos 6,"
+    },
+    {
+      "timecode": "00:05:33",
+      "transcript": "eu vou escrever mais e⁻⁶e⁻³x."
+    },
+    {
+      "timecode": "00:05:38",
+      "transcript": "Veja, eu só peguei isto,"
+    },
+    {
+      "timecode": "00:05:38",
+      "transcript": "2 vezes a primeira derivativa,"
+    },
+    {
+      "timecode": "00:05:40",
+      "transcript": "2 vezes a primeira derivativa."
+    },
+    {
+      "timecode": "00:05:42",
+      "transcript": "Vai ser igual a, ou deve ser igual a,"
+    },
+    {
+      "timecode": "00:05:46",
+      "transcript": "se isso, de fato, satisfaz,"
+    },
+    {
+      "timecode": "00:05:48",
+      "transcript": "se y₁, de fato, satisfaz a equação diferencial,"
+    },
+    {
+      "timecode": "00:05:52",
+      "transcript": "isso deve ser igual a 3 vezes y."
+    },
+    {
+      "timecode": "00:05:55",
+      "transcript": "Bem, 3 vezes y é 3 vezes e⁻³x."
+    },
+    {
+      "timecode": "00:06:01",
+      "transcript": "3e⁻³x."
+    },
+    {
+      "timecode": "00:06:03",
+      "transcript": "E vamos ver se isso, de fato, é verdadeiro."
+    },
+    {
+      "timecode": "00:06:05",
+      "transcript": "Então, estes dois termos aqui,"
+    },
+    {
+      "timecode": "00:06:09",
+      "transcript": "9e⁻³x,"
+    },
+    {
+      "timecode": "00:06:10",
+      "transcript": "essencialmente, menos 6e⁻³x,"
+    },
+    {
+      "timecode": "00:06:13",
+      "transcript": "vai ser 3e⁻³x,"
+    },
+    {
+      "timecode": "00:06:16",
+      "transcript": "que, de fato, é igual a 3e⁻³x."
+    },
+    {
+      "timecode": "00:06:23",
+      "transcript": "Então, y₁ é, de fato, uma solução"
+    },
+    {
+      "timecode": "00:06:25",
+      "transcript": "para esta equação diferencial."
+    },
+    {
+      "timecode": "00:06:28",
+      "transcript": "Mas, como veremos, não é a única solução"
+    },
+    {
+      "timecode": "00:06:31",
+      "transcript": "para esta equação diferencial."
+    },
+    {
+      "timecode": "00:06:33",
+      "transcript": "Por exemplo,"
+    },
+    {
+      "timecode": "00:06:35",
+      "transcript": "por exemplo,"
+    },
+    {
+      "timecode": "00:06:38",
+      "transcript": "digamos que y₂ seja igual a e⁻,"
+    },
+    {
+      "timecode": "00:06:44",
+      "transcript": "é também uma solução para esta equação diferencial."
+    },
+    {
+      "timecode": "00:06:47",
+      "transcript": "E eu encorajo você a pausar o vídeo novamente"
+    },
+    {
+      "timecode": "00:06:48",
+      "transcript": "e verificar que é uma solução."
+    },
+    {
+      "timecode": "00:06:50",
+      "transcript": "Então, assumindo que você tenha tentado,"
+    },
+    {
+      "timecode": "00:06:52",
+      "transcript": "então, a primeira derivativa disso,"
+    },
+    {
+      "timecode": "00:06:53",
+      "transcript": "isso é bastante simples, é e⁻."
+    },
+    {
+      "timecode": "00:06:56",
+      "transcript": "A segunda derivativa é uma das coisas profundas"
+    },
+    {
+      "timecode": "00:06:58",
+      "transcript": "da função exponencial."
+    },
+    {
+      "timecode": "00:06:59",
+      "transcript": "A segunda derivativa aqui também é e⁻."
+    },
+    {
+      "timecode": "00:07:02",
+      "transcript": "Então, se eu tiver..."
+    },
+    {
+      "timecode": "00:07:04",
+      "transcript": "Então, a segunda derivativa,"
+    },
+    {
+      "timecode": "00:07:05",
+      "transcript": "deixe-me fazer com as mesmas cores."
+    },
+    {
+      "timecode": "00:07:07",
+      "transcript": "Então, a segunda derivativa vai ser e⁻"
+    },
+    {
+      "timecode": "00:07:12",
+      "transcript": "mais 2e⁻,"
+    },
+    {
+      "timecode": "00:07:16",
+      "transcript": "mais 2e⁻,"
+    },
+    {
+      "timecode": "00:07:17",
+      "transcript": "que, de fato, vai ser igual a 3e⁻."
+    },
+    {
+      "timecode": "00:07:23",
+      "transcript": "3e⁻."
+    },
+    {
+      "timecode": "00:07:23",
+      "transcript": "Isso é absolutamente verdadeiro."
+    },
+    {
+      "timecode": "00:07:24",
+      "transcript": "e⁻ mais 2e⁻ é 3e⁻."
+    },
+    {
+      "timecode": "00:07:27",
+      "transcript": "Então, y₂ também é uma solução"
+    },
+    {
+      "timecode": "00:07:30",
+      "transcript": "para esta equação diferencial."
+    },
+    {
+      "timecode": "00:07:33",
+      "transcript": "Então, esse é o começo."
+    },
+    {
+      "timecode": "00:07:34",
+      "transcript": "Nos próximos vídeos,"
+    },
+    {
+      "timecode": "00:07:35",
+      "transcript": "vamos explorar mais isso."
+    },
+    {
+      "timecode": "00:07:36",
+      "transcript": "Vamos começar a ver o que as soluções parecem,"
+    },
+    {
+      "timecode": "00:07:38",
+      "transcript": "quais as classes de soluções são,"
+    },
+    {
+      "timecode": "00:07:39",
+      "transcript": "técnicas para resolvê-las,"
+    },
+    {
+      "timecode": "00:07:41",
+      "transcript": "visualizando soluções para equações diferenciais,"
+    },
+    {
+      "timecode": "00:07:43",
+      "transcript": "e um todo de ferramentas"
+    },
+    {
+      "timecode": "00:07:45",
+      "transcript": "para entrar mais profundo."
+    }
+  ]
+}
