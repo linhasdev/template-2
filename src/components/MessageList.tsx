@@ -1,8 +1,9 @@
 import { Message } from 'ai';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Check, Copy, User, Bot } from 'lucide-react';
 import katex from 'katex';
 import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 import 'katex/dist/katex.min.css';
 
 interface MessageListProps {
@@ -10,17 +11,15 @@ interface MessageListProps {
   isLoading: boolean;
 }
 
+// Configure marked options outside the component
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+  pedantic: false
+});
+
 export default function MessageList({ messages, isLoading }: MessageListProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
-
-  // Configure marked options
-  useEffect(() => {
-    marked.setOptions({
-      gfm: true,
-      breaks: true,
-      silent: true
-    });
-  }, []);
 
   const copyToClipboard = (text: string, messageId: string) => {
     navigator.clipboard.writeText(text);
@@ -90,8 +89,9 @@ export default function MessageList({ messages, isLoading }: MessageListProps) {
     // First, process LaTeX
     const processedLatex = renderLatex(content);
     
-    // Then process Markdown
-    const processedMarkdown = marked(processedLatex);
+    // Then process Markdown and sanitize the output
+    const html = marked.parse(processedLatex) as string;
+    const processedMarkdown = DOMPurify.sanitize(html);
 
     return (
       <div 
