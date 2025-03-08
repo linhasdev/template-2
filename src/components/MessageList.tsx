@@ -2,6 +2,7 @@ import { Message } from 'ai';
 import { useState, useEffect } from 'react';
 import { Check, Copy, User, Bot } from 'lucide-react';
 import katex from 'katex';
+import { marked } from 'marked';
 import 'katex/dist/katex.min.css';
 
 interface MessageListProps {
@@ -12,60 +13,103 @@ interface MessageListProps {
 export default function MessageList({ messages, isLoading }: MessageListProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
+  // Configure marked options
+  useEffect(() => {
+    marked.setOptions({
+      gfm: true,
+      breaks: true,
+      silent: true
+    });
+  }, []);
+
   const copyToClipboard = (text: string, messageId: string) => {
     navigator.clipboard.writeText(text);
     setCopiedId(messageId);
     setTimeout(() => setCopiedId(null), 2000);
   };
 
-  const processMessage = (content: string) => {
-    // Split content into paragraphs
-    const paragraphs = content.split('\n\n');
-    
-    return paragraphs.map((paragraph, pIndex) => {
-      // Process each paragraph for LaTeX content using a more compatible regex
-      const parts = paragraph.split(/(?:\\[\[\(][\s\S]*?\\[\]\)])/g);
-      const matches = paragraph.match(/(?:\\[\[\(][\s\S]*?\\[\]\)])/g) || [];
-      
-      // Interleave the parts with the matches
-      const processedParts = parts.reduce((acc: JSX.Element[], part, index) => {
-        acc.push(<span key={`${pIndex}-${index}-text`}>{part}</span>);
-        
-        if (index < matches.length) {
-          const match = matches[index];
-          const isDisplayMath = match.startsWith('\\[') && match.endsWith('\\]');
-          const isInlineMath = match.startsWith('\\(') && match.endsWith('\\)');
-          
-          if (isDisplayMath || isInlineMath) {
-            try {
-              // Remove the delimiters
-              const latex = match.slice(2, -2);
-              const html = katex.renderToString(latex, {
-                displayMode: isDisplayMath,
-                throwOnError: false,
-                strict: false
-              });
-              
-              acc.push(
-                <span 
-                  key={`${pIndex}-${index}-math`}
-                  className={isDisplayMath ? 'math-block' : 'katex-inline'}
-                  dangerouslySetInnerHTML={{ __html: html }}
-                />
-              );
-            } catch (error) {
-              console.error('LaTeX rendering error:', error);
-              acc.push(<span key={`${pIndex}-${index}-error`}>{match}</span>);
-            }
-          }
-        }
-        
-        return acc;
-      }, []);
-      
-      // Wrap each paragraph in a p tag
-      return <p key={`p-${pIndex}`} className="message-content">{processedParts}</p>;
+  const renderLatex = (content: string): string => {
+    // First, handle block math (both $$ and \[ \] syntax)
+    content = content.replace(/\$\$(.*?)\$\$/gs, (_, equation) => {
+      try {
+        return katex.renderToString(equation.trim(), {
+          displayMode: true,
+          throwOnError: false,
+          strict: false
+        });
+      } catch (error) {
+        console.error('LaTeX rendering error:', error);
+        return `$$${equation}$$`;
+      }
     });
+
+    content = content.replace(/\\\[(.*?)\\\]/gs, (_, equation) => {
+      try {
+        return katex.renderToString(equation.trim(), {
+          displayMode: true,
+          throwOnError: false,
+          strict: false
+        });
+      } catch (error) {
+        console.error('LaTeX rendering error:', error);
+        return `\\[${equation}\\]`;
+      }
+    });
+
+    // Then handle inline math (both $ and \( \) syntax)
+    content = content.replace(/\$(.+?)\$/g, (_, equation) => {
+      try {
+        return katex.renderToString(equation.trim(), {
+          displayMode: false,
+          throwOnError: false,
+          strict: false
+        });
+      } catch (error) {
+        console.error('LaTeX rendering error:', error);
+        return `$${equation}$`;
+      }
+    });
+
+    content = content.replace(/\\\((.*?)\\\)/g, (_, equation) => {
+      try {
+        return katex.renderToString(equation.trim(), {
+          displayMode: false,
+          throwOnError: false,
+          strict: false
+        });
+      } catch (error) {
+        console.error('LaTeX rendering error:', error);
+        return `\\(${equation}\\)`;
+      }
+    });
+
+    return content;
+  };
+
+  const processMessage = (content: string) => {
+    // First, process LaTeX
+    const processedLatex = renderLatex(content);
+    
+    // Then process Markdown
+    const processedMarkdown = marked(processedLatex);
+
+    return (
+      <div 
+        className="prose prose-slate max-w-none
+          prose-headings:text-gray-900 prose-p:text-gray-800 
+          prose-strong:text-gray-900 prose-em:text-gray-800
+          prose-code:text-gray-800 prose-li:text-gray-800
+          prose-p:mt-2 prose-p:mb-2
+          prose-headings:mt-4 prose-headings:mb-2
+          prose-li:mt-1 prose-li:mb-1
+          prose-code:px-1 prose-code:py-0.5 prose-code:bg-gray-100 prose-code:rounded
+          prose-pre:bg-gray-100 prose-pre:p-4 prose-pre:rounded-lg
+          prose-blockquote:border-l-4 prose-blockquote:border-gray-300 prose-blockquote:pl-4 prose-blockquote:italic
+          prose-table:border prose-table:border-collapse prose-td:border prose-td:p-2 prose-th:border prose-th:p-2
+          [&_.katex-display]:my-4 [&_.katex]:leading-normal"
+        dangerouslySetInnerHTML={{ __html: processedMarkdown }}
+      />
+    );
   };
 
   return (
@@ -89,8 +133,8 @@ export default function MessageList({ messages, isLoading }: MessageListProps) {
             <div 
               className={`p-3 rounded-lg ${
                 message.role === 'user' 
-                  ? 'bg-blue-500 text-white' 
-                  : 'bg-white border border-gray-200 text-gray-800'
+                  ? 'bg-blue-500 prose-headings:text-white prose-p:text-white prose-strong:text-white prose-em:text-white prose-code:text-white prose-code:bg-blue-600 prose-pre:bg-blue-600 prose-blockquote:border-white prose-a:text-white prose-li:text-white' 
+                  : 'bg-white border border-gray-200'
               }`}
             >
               {processMessage(message.content)}
